@@ -24,10 +24,12 @@
                     </a>
                     <nav class="nav-header">
                         <ul>
-                            <li>Nosotros</li>
-                            <li>Contactenos</li>
-                            <li>Ayuda</li>
-                            <li>Nuestro catalogo</li>
+                            <li>
+                            <!-- Utilizo el # para que me salte a la siguiente seccion de la pagina (en este caso al footer)-->
+                                <a href="#nosotros" > 
+                                    Nosotros                                    
+                                </a>
+                            </li>
                         </ul>
                     </nav>
             </div>
@@ -36,6 +38,7 @@
         <main class="main-container">
             <div class="columna-izquierda">
                 <div class="titles-container">
+                    <!-- Utilizo la clase resaltar-naranja para no tener que poner manualmente cada clase por individual que quiero que se resalte-->
                 <h1>Super<span class="resaltar-naranja">Cars</span> Olivos</h1>
                 <h2>Los mejores autos deportivos</h2>
                 </div>
@@ -126,7 +129,12 @@
                 </p>
             </div>
         </section>
-        <footer class="">
+        <footer id="nosotros" class="footer-nosotros">
+            <div class="footer-container">
+                <p>
+                    Esta proyecto de pagina a sido diseñado por <span class="resaltar-naranja">Cecilio Amud</span>, estudiante de la UTN, Contacto:<span class="resaltar-naranja"> +5491168167219</span>, Mail: <span class="resaltar-naranja">cecilioamud@gmail.com</span>
+                </p>
+            </div>
         </footer>
     </div>
     <script src="index.js"></script>

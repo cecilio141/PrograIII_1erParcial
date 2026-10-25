@@ -1,11 +1,11 @@
 
-
-
 body{
     background-image: url(assets/hero.jpg);
+    /*Evito los espacios en blanco*/
     padding: 0;
     background-size: cover;
     background-position: center;
+    /*Evito que se repita la imagen del fondo*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -19,7 +19,7 @@ header{
     display: flex;
 }
 
-.header-container{
+.header-container, .footer-nosotros{
     background-color: #202020e6;
     display: flex;
     width: 100%;
@@ -45,6 +45,13 @@ header{
     color: white;
     display: flex;
     flex-wrap: wrap;
+}
+
+.headoer-container ul li a{
+    color: white;
+}
+a:visited{
+    color: white;
 }
 
 .header-container li{
@@ -230,6 +237,7 @@ header{
     transition: background-color 0.5s ease;
 }
 
+/*La trancicion que va a tomar el evento activarColor y desactivarColor del JS*/
 .cambio-color {
 /* El !important asegura que pise el color original */
   background-color: #202020 !important; 
@@ -239,4 +247,15 @@ header{
  cuadro el scroll sea suave*/
 html{
     scroll-behavior: smooth;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 20px 15px;
+    width: 100%;
 }
