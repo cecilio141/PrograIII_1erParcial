@@ -47,12 +47,11 @@ header{
     flex-wrap: wrap;
 }
 
-.headoer-container ul li a{
+/*Hago que el link sea de color blanco haya sido visitado o no*/
+a:visited, a:link{
     color: white;
 }
-a:visited{
-    color: white;
-}
+
 
 .header-container li{
 font-size: 20px;
