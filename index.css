@@ -180,7 +180,7 @@ header{
     width: 100%; /*Hace que ocupe el 100% de las pantallas chicas y que a su vez sirva para que el texto que contiene se amolde al div*/
     max-width: 300px;
     border-radius: 8px;
-    margin: 0 auto; /*El auto reparte a los costados en partes iguales (el 0 indica el top y el bottom)*/
+    margin: 0 auto; /*El auto reparte a los costados en partes iguales (el 0 indica el top y el bottom)s*/
     margin-top:80px;
     padding: 10px;
 }
