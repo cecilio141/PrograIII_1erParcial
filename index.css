@@ -26,7 +26,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
-    flex-wrap: wrap; /*Se pone debajo de la imagen si no hay espacio*/
+    /*Se pone debajo de la imagen si no hay espacio*/
+    flex-wrap: wrap; 
 }
 
 .header-container a img{
@@ -37,7 +38,8 @@ header{
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    list-style: none; /*Saco los puntos de las listas del ul*/
+    /*Saco los puntos de las listas del ul*/
+    list-style: none; 
 }
 .header-container ul li{
     color: white;
@@ -64,7 +66,8 @@ header{
 
 .titles-container{
     color: rgb(255, 255, 255);
-    background-color: #f1ecec1A; /*El 80 al final es el nivel de transparencia, en este caso seria la transparencia de un 50%*/
+    /*El 1A al final es el nivel de transparencia, en este caso seria la transparencia de un 50%*/
+    background-color: #f1ecec1A; 
     border-radius: 8px;
     box-sizing: border-box;
     margin: 20px 10px;
@@ -72,7 +75,8 @@ header{
     padding: 5px;
 }
 
-.resaltar-naranja, .columna-derecha .resaltar-naranja{ /*Tuve que utilizar la columna derecha para que el span dentro de los a respeten lo naranja*/
+/*Tuve que utilizar la columna derecha para que el span dentro de los a respeten lo naranja*/
+.resaltar-naranja, .columna-derecha .resaltar-naranja{ 
     color: rgb(255, 119, 0);
 }
 
@@ -93,14 +97,18 @@ header{
     border-radius: 8px;
     margin-left: auto; /*fuerzo a pegarlo a la derecha*/
     width: 30%;
-    height: calc(100vh - 100px) /*Hago esa cuenta porque los -100px son los del header y el 100vh es para que ocupe toda la primer pagina*/
+    /*Hago esa cuenta porque los -100px son los del header y el 100vh 
+    es para que ocupe toda la primer pagina*/
+    height: calc(100vh - 100px) 
 }
 .premium-container, .noble-container{
     text-align: center;
     margin-top: 20px;
-    height: calc(50vh - 100px); /*La misma cuenta que arriba*/;
+    /*La misma cuenta que arriba*/;
+    height: calc(50vh - 100px); 
     border-radius: 8px;
-    background-color: #202020BF; /*El BF de al final le da una transparencia del 20%*/
+    /*El BF de al final le da una transparencia del 20%*/
+    background-color: #202020BF; 
     height: auto;
 }
 .premium-container a, .noble-container a{
@@ -118,11 +126,14 @@ header{
     
     width: 100%;
     height: 100%;
-    object-fit: contain; /*adapta la imagen al tamaño del div*/
+    /*adapta la imagen al tamaño del div*/
+    object-fit: contain; 
 }
 #premiums, #nobles{
     width: 100%;
-    min-height: 100vh; /*Hago esto para asi me ocupa todo el alto y ancho de la pantalla la seccion de premiums*/
+    /*Hago esto para asi me ocupa todo el alto y ancho
+    de la pantalla la seccion de premiums*/
+    min-height: 100vh; 
 }
 
 
@@ -137,7 +148,9 @@ header{
 
 .header-autos-premiums{
     display: flex;
-    flex-direction: column; /*Hago esto para que el h1, quede arriba de los vehiculos a seleccionar*/
+    /*Hago esto para que el h1, quede
+    arriba de los vehiculos a seleccionar*/
+    flex-direction: column; 
     justify-content: center;
     height: 10%;
     align-items: center;
@@ -153,8 +166,9 @@ header{
     display: flex;
     gap: 15px;
     min-width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .btn-auto{
@@ -163,11 +177,18 @@ header{
     border: none;
     background-color: #20202066;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+    max-width: 180px;
+    justify-content: space-between;
 }
 
 .btn-auto img{
     object-fit: contain;
-    width: 100%; /*Se adapta al tamaño del boton sin deformarse a pesar de que se achique el boton*/
+    /*Se adapta al tamaño del boton
+     sin deformarse a pesar de que se achique el boton*/
+    width: 100%; 
     height: auto;
 }
 
@@ -183,10 +204,14 @@ header{
 .especificacion-container{
     display: flex;
     background-color: #20202080;
-    width: 100%; /*Hace que ocupe el 100% de las pantallas chicas y que a su vez sirva para que el texto que contiene se amolde al div*/
+    /*Hace que ocupe el 100% de las pantallas chicas y que a su vez sirva 
+    para que el texto que contiene se amolde al div*/
+    width: 100%; 
     max-width: 300px;
     border-radius: 8px;
-    margin: 0 auto; /*El auto reparte a los costados en partes iguales (el 0 indica el top y el bottom)*/
+    /*El auto reparte a los costados en partes 
+    iguales (el 0 indica el top y el bottom)*/
+    margin: 0 auto; 
     margin-top:80px;
     padding: 10px;
 }
@@ -197,4 +222,21 @@ header{
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
+}
+
+
+/*Botones a los cuales deseo aplicarles la transicion de color cuando el mouse esta arriba*/
+.premium-container, .btn-auto, .noble-container{
+    transition: background-color 0.5s ease;
+}
+
+.cambio-color {
+/* El !important asegura que pise el color original */
+  background-color: #202020 !important; 
+}
+
+/*Asigno este scroll, para que cuando clickeé en un
+ cuadro el scroll sea suave*/
+html{
+    scroll-behavior: smooth;
 }
