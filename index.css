@@ -1,3 +1,6 @@
+
+
+
 body{
     background-image: url(assets/hero.jpg);
     padding: 0;
@@ -11,12 +14,9 @@ body{
 }
 
 header{
-    border: 1px solid black;
     width: 100%;
-    height: 100px;
-    box-sizing: border-box;
+    min-height: 80px;
     display: flex;
-    margin-right: 0px;
 }
 
 .header-container{
@@ -26,24 +26,28 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
+    flex-wrap: wrap; /*Se pone debajo de la imagen si no hay espacio*/
 }
 
 .header-container a img{
-    width: 30%;
+    width: 100px;
 }
 
 .header-container ul{
     display: flex;
     gap: 30px;
-    width: max-content;
+    flex-wrap: wrap;
+    list-style: none; /*Saco los puntos de las listas del ul*/
 }
 .header-container ul li{
     color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .header-container li{
-    font-size: 20px;
-    list-style: none; /*Saco los puntos de las listas del li*/
+    font-size: 16px;
+
 }
 
 .main-container{
@@ -68,7 +72,7 @@ header{
     padding: 5px;
 }
 
-.columna-izquierda h1 span, .especificacion-container p span, .header-autos-premiums h2 span, .premium-container span span, .noble-container span span{
+.resaltar-naranja, .columna-derecha .resaltar-naranja{ /*Tuve que utilizar la columna derecha para que el span dentro de los a respeten lo naranja*/
     color: rgb(255, 119, 0);
 }
 
@@ -84,9 +88,10 @@ header{
 
 
 .columna-derecha{
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
     margin-left: auto; /*fuerzo a pegarlo a la derecha*/
-    box-sizing: border-box;
     width: 30%;
     height: calc(100vh - 100px) /*Hago esa cuenta porque los -100px son los del header y el 100vh es para que ocupe toda la primer pagina*/
 }
@@ -96,20 +101,21 @@ header{
     height: calc(50vh - 100px); /*La misma cuenta que arriba*/;
     border-radius: 8px;
     background-color: #202020BF; /*El BF de al final le da una transparencia del 20%*/
+    height: auto;
 }
 .premium-container a, .noble-container a{
     display: flex;
     flex-direction: column;
     text-decoration: none;
     font-size: 30px;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 .premium-container span,.noble-container span{
     color: white;
     
 }
 .premium-container img, .noble-container img{
-    margin-top: -30px;
+    
     width: 100%;
     height: 100%;
     object-fit: contain; /*adapta la imagen al tamaño del div*/
@@ -180,7 +186,7 @@ header{
     width: 100%; /*Hace que ocupe el 100% de las pantallas chicas y que a su vez sirva para que el texto que contiene se amolde al div*/
     max-width: 300px;
     border-radius: 8px;
-    margin: 0 auto; /*El auto reparte a los costados en partes iguales (el 0 indica el top y el bottom)s*/
+    margin: 0 auto; /*El auto reparte a los costados en partes iguales (el 0 indica el top y el bottom)*/
     margin-top:80px;
     padding: 10px;
 }
